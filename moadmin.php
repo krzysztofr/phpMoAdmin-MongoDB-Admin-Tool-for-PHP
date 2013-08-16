@@ -26,7 +26,7 @@
 /**
  * Sets the design theme - themes options are: swanky-purse, trontastic, simple-gray and classic
  */
-define('THEME', 'trontastic');
+define('THEME', 'swanky-purse');
 
 /**
  * To connect to a remote or authenticated Mongo instance, define the connection string in the MONGO_CONNECTION constant
@@ -1132,8 +1132,9 @@ class htmlHelper {
                 $return .= PHP_EOL . (is_array($head) ? implode(PHP_EOL, $head) : $head);
             }
 
-            $return .= PHP_EOL . '</head>' . PHP_EOL . '<body>'
-                    . $this->js('https://GoChat.us/chat.js#identity=5047dd509c3a8dd8fec07b5b&appid=phpmoadmin.com');
+            $return .= PHP_EOL . '</head>' . PHP_EOL . '<body>';
+                    // I don't like & don't need the chat
+                    //. $this->js('https://GoChat.us/chat.js#identity=5047dd509c3a8dd8fec07b5b&appid=phpmoadmin.com');
             return $return;
         } else {
             $errorMsg = 'Invalid usage of ' . __METHOD__ . '() - the header has already been returned';
